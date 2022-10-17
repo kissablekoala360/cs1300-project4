@@ -1,0 +1,300 @@
+@font-face {
+    font-family: GaretBook;
+    src: url(./fonts/garet/Garet-Book.ttf);
+}
+
+@font-face {
+    font-family: PosterBold;
+    src: url(./fonts/garet/Porter-Bold.ttf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    font-family: GaretBook;
+}
+
+h1 {
+    font-family: PosterBold;
+    letter-spacing: -5px;
+    line-height: 1;
+
+    /* color: #EFC61A; */
+    color: #367C2B;
+}
+
+h2 {
+    color: #367C2B;
+    font-size: 2rem;
+    line-height: .8;
+}
+
+@media (max-width: 820px) {
+    .menu-mobile-toggle {
+        display: block !important;
+    }
+
+    .menu-main {
+        display: none !important;
+    }
+
+    .tractor-tile {
+        height: 150px !important;
+        width: 400px !important;
+    }
+
+    .project-update-wrapper {
+        flex-direction: column !important;
+    }
+
+    .project-image {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-wrapper {
+        padding: 2rem !important;
+    }
+
+    .header-logo {
+        background-image: url('./images/deere-logo.svg') !important;
+        width: 75px !important;
+        height: 75px !important;
+    }
+}
+
+@media (max-width: 270px) {
+    .home-wrapper {
+        padding: .5rem !important;
+    }
+}
+
+.nav-wrapper {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    z-index: 100000;
+}
+
+.header-logo {
+    width: 300px;
+    height: 50px;
+
+    background-image: url('./images/deere-logo-agriculture.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nav-items > a {
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #367C2B;
+}
+
+.mobile-icon {
+    height: 50px;
+    width: 50px;
+
+    background-image: url('./images/menu-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-mobile {
+    flex-direction: column;
+    height: 160px;
+
+    display: none;
+}
+
+.mobile-nav-items {
+    margin-top: 35px;
+    flex-direction: column;
+}
+
+.mobile-nav-items > a {
+    font-size: 1.7rem !important;
+}
+
+.home-wrapper {
+    width: 100%;
+    height: 100%;
+
+    max-height: 1250px;
+    
+    display: flex;
+    justify-content: start;
+    padding: 10rem;
+
+    background: url('./images/bg-1.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home-welcome {
+    width: 520px;
+    height: auto;
+
+    align-self: flex-end;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+
+/* CSS Button from CSS Button Website */
+.button-31 {
+  background-color: #EFC61A;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* width: 100%; */
+  margin-top: 14px;;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .90;
+}
+
+.tractor-wrapper {
+    width: 100%;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+    overflow-y: scroll;
+    align-items: center;
+}
+
+.tractor-tile {
+    height: 250px;
+    width: 500px;
+
+    background-color: #F5F5F5;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px;
+    border-radius: 20px 0px 0px 20px;
+    margin-right: 60px;
+}
+
+.tractor-image {
+    background-image: url('./images/tractor-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    align-self: center;
+    justify-self: center;
+
+    height: 100%;
+    width: 300px;
+}
+
+.tractor-text {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+
+    padding: 5px;
+}
+
+.bolder {
+    font-size: 3.5rem;
+    font-family: PosterBold;
+    letter-spacing: -4px;
+}
+
+.project-update-wrapper {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.project-image {
+    background: url('./images/project.webp') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    border-radius: 4px;
+
+    width: 50%;
+    height: 400px;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0px;
+
+}
+
+.project-text > h1 {
+    font-size: 4rem;
+    color: #EFC61A;
+}
+
+.project-text > p {
+    max-width: 500px;
+}
+
+.project-text > button {
+    background-color: #367C2B;
+    max-width: 150px;
+}

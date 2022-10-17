@@ -1,0 +1,413 @@
+@font-face {
+    font-family: DolceVita;
+    src: url(./fonts/dolce_vita/Dolce\ Vita.ttf);
+}
+
+@font-face {
+    font-family: DolceVitaHeavy;
+    src: url(./fonts/dolce_vita/Dolce\ Vita\ Heavy\ Bold.ttf);
+}
+
+@font-face {
+    font-family: GeosansLight;
+    src: url(./fonts/geo_sans_light/GeosansLight.ttf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+
+    font-family: DolceVita;
+    color: white;
+}
+
+p, ul, .accordian-panel {
+    font-family: GeosansLight;
+    line-height: 1.1;
+}
+
+p#big {
+    font-size: 2rem;
+}
+
+h1#title {
+    font-family: DolceVita;
+    font-size: 4rem;
+    color: white;
+
+    line-height: 1;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+
+    line-height: 1;
+}
+
+.bolder {
+    font-family: DolceVitaHeavy;
+}
+
+.nav-wrapper {
+    position: fixed;
+    width: 100%;
+
+    z-index: 100000;
+}
+
+.nav-wrapper.scrolled {
+    background-color: #755543 !important;
+    color: white !important;
+    transition: background-color 200ms linear;
+}
+
+.nav-items > a {
+    margin: 7px;
+}
+
+.nav-items {
+    float: right;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.header-wrapper{
+    width: 100%;
+    height: 100%;
+
+    background-image: url("./images/bg-3.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header-banner {
+    width: 100% !important;
+    min-height: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.fade-in-slow {
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 1s ease 0s normal forwards 1 fadein;
+}
+.fade-in-slower {
+    -webkit-animation: 2s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+button {
+    /* https://copy-paste-css.com/ button */
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: rgb(60, 66, 87);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    display: inline-block;
+    min-height: 28px;
+    transition: background-color .22s,box-shadow .22s;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+button:hover {
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 3px 9px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.introduction {
+    /* width: 100%; */
+    padding: 5rem;
+    padding-top: 7rem;
+    background-color: #755543;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.introduction-card-wrapper{
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 125px;
+}
+
+.introduction-card {
+    width: 340px;
+    height: 100%;
+    padding: 10px;
+
+    overflow-x: hidden;
+
+    border-radius: 20px;
+    background-color: #fff0d1;
+    color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 100;
+}
+
+.introduction-image {
+    height: 250px;
+    background-image: url("./images/sketches/overview.png");
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.food-floaters {
+    position: absolute;
+
+    height: 100px;
+    width: 200px;
+
+    left: -4rem;
+    top: -5rem;
+    transform: rotate(-30deg) scale(1.5);
+
+    background-image: url('./images/dishes/Asset\ 3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.observations {
+    /* width: 100%; */
+    padding: 5rem;
+    background-color: #fff0d1;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.interview-card {
+    width: 700px;
+    /* height: 300px; */
+
+    border-radius: 20px;
+    padding: 20px;
+
+    background-color: #755543;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.interview-icon {
+    height: 200px;
+    width: 200px;
+    flex-shrink: 0;
+    margin-top: 50px;
+    align-self: flex-start;
+
+    background-image: url('./images/users/user3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.interview-info {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    padding-top: 40px;
+
+    display: flex;
+    align-items: flex-start !important;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: disc;
+    color: white;
+    padding-left: 2rem;
+}
+
+.accordian-panel {
+    display: none;
+    transition: display 200ms linear;
+    width: 100%;
+}
+
+.interview-accordian-name {
+    background-color: #fff0d1;
+    color: #755543;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.interview-accordian-name#brown {
+    background-color: #755543 !important;
+    color: white !important;
+}
+
+.accordian-expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 5rem !important;
+    width: 50px;
+    text-align: center;
+    line-height: .5;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.people {
+    /* width: 100%; */
+    padding: 5rem;
+    background-color: #755543;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.people-card {
+    width: 700px;
+    /* height: 300px; */
+
+    border-radius: 20px;
+    padding: 20px;
+
+    background-color: #fff0d1;
+    color: black !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.people-icon {
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+
+    background-image: url('./images/users/user3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.interactions {
+    /* width: 100%; */
+    padding: 5rem;
+    background-color: #fff0d1;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.interactions-card {
+    width: 700px;
+    /* height: 300px; */
+
+    border-radius: 20px;
+    padding: 20px;
+
+    background-color: #755543;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.empathy-grid {
+    width: 100%;
+    height: 400px;
+    padding-top: 5px;;
+
+    background-image: url('./images/empathy/empathy1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.interactions-story-board {
+    width: 486.5px;
+    height: 340px;
+    padding-top: 5px;;
+
+    background-image: url('./images/empathy/storyboard.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.prototype-image {
+    width: 100%;
+    height: 400px;
+
+    background-image: url('./images/wireframes/lowfi/Mobile.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

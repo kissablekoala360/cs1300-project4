@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="./assets/index.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>John Deere</title>
+    </header>
+    <body>
+        <div class="nav-wrapper">
+            <div class="p-10">
+                <nav class="flex items-center justify-between ">
+                    <div class="flex items-center">
+                        <a href="index.html#home"><div class="header-logo"></div></a>
+                    </div>
+                    <div class="menu-main flex nav-items">
+                        <a href="#">About</a>
+                        <a href="#">Products</a>
+                        <a href="#">News</a>
+                    </div>
+                    <div class="menu-mobile-toggle" style="display: none;">
+                        <a onclick="toggleMenuVis();"><div class="mobile-icon"></div></a>
+                    </div>
+                </nav>
+               
+                <div class="menu-mobile" id="menu-toggle" style="display: none;">
+                    <div class="flex nav-items h-100 mobile-nav-items">
+                        <a href="#">About</a>
+                        <a href="#">Products</a>
+                        <a href="#">News</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-wrapper">
+            <div class="home-welcome">
+                <h1>John Deere</h1>
+                <h2>Tractors For The Future</h2>
+                <button class="button-31" role="button">Lean More</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="tractor-wrapper">
+                <div class="tractor-tile">
+                    <div class="tractor-image"></div>
+                    <div class="tractor-text">
+                        <h2 class="bolder">Tractor</h2>
+                        <h2 class="pl-2">V500T-B</h2>
+                    </div>
+                </div>
+                <div class="tractor-tile" >
+                    <div class="tractor-image" style="background-image: url('./assets/images/tractor-2.png');"></div>
+                    <div class="tractor-text">
+                        <h2 class="bolder">Tractor</h2>
+                        <h2 class="pl-2">V500T-B</h2>
+                    </div>
+                </div>
+                <div class="tractor-tile">
+                    <div class="tractor-image"></div>
+                    <div class="tractor-text">
+                        <h2 class="bolder">Tractor</h2>
+                        <h2 class="pl-2">V500T-B</h2>
+                    </div>
+                </div>
+                <div class="tractor-tile" style="margin: 0px;">
+                    <div class="tractor-image"></div>
+                    <div class="tractor-text">
+                        <h2 class="bolder">Tractor</h2>
+                        <h2 class="pl-2">V500T-B</h2>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project-update-wrapper">
+                <div class="project-image"></div>
+                <div class="project-text">
+                    <h1>Project Updates</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dolor magna, volutpat non commodo non, sagittis ac est. Nunc pharetra eget nibh eget tincidunt. Morbi tempus diam faucibus, dignissim orci non, vestibulum ante. Nullam pellentesque nibh aliquet justo aliquet consequat. Pellentesque eu velit massa. Aenean lobortis tortor nulla, sed semper odio molestie sit amet. Integer auctor ipsum in lacus eleifend bibendum. Quisque rutrum mi at nunc bibendum, quis dignissim nibh laoreet. Mauris porta erat sapien.</p>
+                    <button class="button-31" role="button">Lean More</button>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script>
+            //scroll through trucks
+            const slider = document.querySelector('.tractor-wrapper');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            });
+            slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+            });
+            slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+            });
+            slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+            console.log(walk);
+            });
+
+            //menu drop down
+            function toggleMenuVis() {
+                var x = document.getElementById("menu-toggle");
+                if (x.style.display === "none") {
+                    x.style.display = "flex";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+            //make sure menu closed when big
+            $(window).resize(function() {
+                if ($( window ).width() >= 800) {
+                    $(".menu-mobile").hide();
+                }
+            });
+            
+        </script>
+    </footer>
+</html>
