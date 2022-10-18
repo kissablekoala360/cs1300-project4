@@ -7,7 +7,14 @@
         <title>Let's Talk Tractors</title>
     </header>
 
+    <!-- My Modal -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+        <p style="text-align: center;" id="close-modal">Click here to close image</p>
+    </div>
+
     <body>
+
         <section id="home" class="header-wrapper">
             <div class="nav-wrapper">
                 <nav class="flex items-center justify-between p-6">
@@ -34,7 +41,7 @@
             <div class="introduction-card-wrapper">
                 <div class="people-card">
                     <h1 id="title" class="bolder pt-8" style="line-height: 0; color: black; font-family: DolceVitaHeavy;">The Problem</h1>
-                    <p>Many of todays fortune 500 companies use outdated and confusing websites. Let's take a look at John Deere's website: diagnose the problems and give it a fresh look.</p>
+                    <p>Many of todays Fortune 500 companies use outdated and confusing websites. Let's take a look at John Deere's website, diagnose the problems, and give it a fresh look.</p>
     
                     <div class="empathy-grid" style="background-image: url('./assets/images/og-site.png');"></div>
 
@@ -46,9 +53,9 @@
                     <div class="accordian-panel">
                         <ul style="color: #755543 !important">
                             <li><p>The website has three menus: the header menu, the list of vehicles and parts, and the secondary header menu under the main image.</p></li>
-                            <li><p>With so many buttons there is no clear call to action.</p></li>
-                            <li><p>A user without knowledge of the site or a direct purpose feels confused and pureposeless on this website.</p></li>
-                            <li><p>On mobile versions of the website the second menu (list of machine image options) becomes the main focus of the landing page.</p></li>
+                            <li><p>With so many buttons, there is no clear call to action.</p></li>
+                            <li><p>A user without knowledge of the site or a direct purpose may feel confused and purposeless on this website.</p></li>
+                            <li><p>On mobile versions of the website, the second menu (list of machine image options) becomes the main focus of the landing page.</p></li>
                         </ul>
                     </div>
 
@@ -70,6 +77,7 @@
         </section>
 
         <section class="observations" id="redesign">
+
             <div class="interactions-card">
                 <h1 id="title" class="bolder pt-8" style="line-height: 0; font-family: DolceVitaHeavy;">Our New Look</h1>
                 <p>Let's take our observations about the design issues and accessibility issues and create a new look for the website.</p>
@@ -80,24 +88,25 @@
                 <div class="interview-icon" style="background-image: url('./assets/images/icons/color-palette.png');"></div>
                 <div class="interview-info">
                     <h3 class="bolder">Low-Fi Designs</h3>
+                    <p>Click the images people to enlarge them.</p>
                     
                     <div class="interview-accordian-name">
                         <p>Phone Prototype</p>
                         <div class="accordian-expand">+</div>
                     </div>
-                    <div class="accordian-panel"><div class="prototype-image"></div></div>
+                    <div class="accordian-panel"><div class="prototype-image" id="proto-phone" style="cursor: pointer;"></div></div>
 
                     <div class="interview-accordian-name">
                         <p>Tablet Prototype</p>
                         <div class="accordian-expand">+</div>
                     </div>
-                    <div class="accordian-panel"><div class="prototype-image" style="background-image: url('./assets/images/wireframes/lowfi/Tablet.png'); height: 320px;"></div></div>
+                    <div class="accordian-panel"><div class="prototype-image" id="proto-tablet" style="cursor: pointer; background-image: url('./assets/images/wireframes/lowfi/Tablet.png'); height: 320px;"></div></div>
 
                     <div class="interview-accordian-name">
                         <p>Desktop Prototype</p>
                         <div class="accordian-expand">+</div>
                     </div>
-                    <div class="accordian-panel"><div class="prototype-image" style="background-image: url('./assets/images/wireframes/lowfi/Website.png'); height: 473px"></div></div>
+                    <div class="accordian-panel"><div class="prototype-image" id="proto-desktop" style="cursor: pointer; background-image: url('./assets/images/wireframes/lowfi/Website.png'); height: 473px"></div></div>
 
                 </div>
             </div>
