@@ -312,23 +312,34 @@ ul {
     cursor: pointer;
 }
 
+
 .interview-accordian-name#brown {
     background-color: #755543 !important;
     color: white !important;
 }
 
 .accordian-expand {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 
     font-size: 5rem !important;
     width: 50px;
+    height: 50px;
     text-align: center;
     line-height: .5;
 
     flex-shrink: 0;
     flex-grow: 0;
+    padding: 10px;
+}
+
+.accordian-expand#brown {
+    color: black !important;
+}
+
+.accordian-expand#brown > li{
+    color: black !important;
 }
 
 .people {
@@ -395,7 +406,11 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    /* gap: 30px; */
+}
+
+li {
+    font-size: 1.1rem;
 }
 
 .empathy-grid {
